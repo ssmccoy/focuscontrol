@@ -53,5 +53,6 @@ function enable() {
 }
 
 function disable() {
-    Main.panel._rightBox.remove_child(button);
+    [ LEFT, DOWN, UP, RIGHT ].forEach((direction) =>
+        Main.wm.removeKeybinding("focus-" + direction));
 }
