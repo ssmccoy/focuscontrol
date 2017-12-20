@@ -1,0 +1,8 @@
+{
+    "description": "Focus on the window which is in a collision path with the current window, in a given direction.",
+    "name": "Focus Control",
+    "shell-version": [
+        "3.26.2"
+    ],
+    "uuid": "focuscontrol@tag.cpan.org"
+}

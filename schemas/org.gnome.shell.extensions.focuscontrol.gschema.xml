@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.focuscontrol" path="/org/gnome/shell/extensions/focuscontrol">
+    <key type="as" name="focus-left">
+      <default><![CDATA[['<Super><Left>']]]></default>
+      <summary>Send focus to the next window to the left.</summary>
+    </key>
+    <key type="as" name="focus-down">
+      <default><![CDATA[['<Super><Down>']]]></default>
+      <summary>Send focus to the next window left.</summary>
+    </key>
+    <key type="as" name="focus-up">
+      <default><![CDATA[['<Super><Up>']]]></default>
+      <summary>Send focus to the next window left.</summary>
+    </key>
+    <key type="as" name="focus-right">
+      <default><![CDATA[['<Super><Right>']]]></default>
+      <summary>Send focus to the next window to the right.</summary>
+    </key>
+  </schema>
+</schemalist>
