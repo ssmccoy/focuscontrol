@@ -11,10 +11,10 @@ const LEFT  = "left"
 const RIGHT = "right"
 
 let distances = {
-    DOWN: (c, f) => c.y() - f.y(),
-    LEFT: (c, f) => f.x() - c.x,
-    RIGHT: (c, f) => c.x - f.x(),
-    UP: (c, f) => f.y - c.y()
+    DOWN: (f, c) => c.y() - f.y(),
+    LEFT: (f, c) => f.x() - c.x,
+    RIGHT: (f, c) => c.x - f.x(),
+    UP: (f, c) => f.y - c.y()
 }
 
 function distance(direction, focus, win) {
@@ -23,7 +23,7 @@ function distance(direction, focus, win) {
         "y": win.y() + (win.height() / 2)
     }
 
-    return distances[direction](win, focus)
+    return distances[direction](focus, center)
 }
 
 function focus(direction) {
@@ -33,7 +33,7 @@ function focus(direction) {
 
     let [ distance, window ] =
         workspace.list_windows().map(
-            (w) => [ distance(geometry, w.get_frame_rect()), w ]
+            (w) => [ distance(direction, geometry, w.get_frame_rect()), w ]
         ).sort((a, b) => a[0] - b[0]).shift();
 
     if (window != focus_window) {
