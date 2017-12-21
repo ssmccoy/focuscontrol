@@ -1,4 +1,5 @@
 
+const Meta        = imports.gi.Meta;
 const Main        = imports.ui.main;
 const Me          = imports.misc.extensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
@@ -46,7 +47,8 @@ function enable() {
             Convenience.getSettings(),
             Meta.KeyBindingFlags.NONE,
             Shell.ActionMode.NORMAL,
-            () => focus(direction));
+            () => focus(direction)
+        );
     });
 }
 
